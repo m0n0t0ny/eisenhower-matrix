@@ -1,0 +1,22 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sfondo -->
+  <rect width="512" height="512" rx="100" fill="#4a6fa5"/>
+  
+  <!-- Quadranti -->
+  <g transform="translate(100, 100) scale(0.6)">
+    <!-- Q1: Urgente e Importante -->
+    <rect x="0" y="0" width="220" height="220" rx="20" fill="#e74c3c" stroke="white" stroke-width="10"/>
+    <!-- Q2: Non Urgente ma Importante -->
+    <rect x="240" y="0" width="220" height="220" rx="20" fill="#f39c12" stroke="white" stroke-width="10"/>
+    <!-- Q3: Urgente ma Non Importante -->
+    <rect x="0" y="240" width="220" height="220" rx="20" fill="#3498db" stroke="white" stroke-width="10"/>
+    <!-- Q4: Non Urgente e Non Importante -->
+    <rect x="240" y="240" width="220" height="220" rx="20" fill="#7f8c8d" stroke="white" stroke-width="10"/>
+  </g>
+  
+  <!-- Checkbox completato -->
+  <g transform="translate(340, 340)">
+    <circle cx="30" cy="30" r="50" fill="white"/>
+    <path d="M15,30 L25,40 L45,20" stroke="#28a745" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
