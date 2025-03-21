@@ -89,6 +89,20 @@ h3 {
   padding: 0;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  margin-bottom: 0rem;
+  margin-left: 1rem;
+}
+
 header {
   background-color: white;
   padding: 1rem var(--gutter);
@@ -354,6 +368,10 @@ button svg {
   flex-shrink: 0;
 }
 
+.task-checkbox:checked {
+  accent-color: var(--success-color);
+}
+
 .task-text-container {
   flex-grow: 1;
   display: flex;
@@ -584,14 +602,14 @@ button svg {
   background-color: rgba(52, 152, 219, 0.1);
   transform: translateX(-100%);
   opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+  transition: transform var(--transition-speed), opacity var(--transition-speed), background-color var(--transition-speed);
 }
 
 .completed-task-item.deleting {
   background-color: rgba(231, 76, 60, 0.1);
   transform: scale(0.8);
   opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+  transition: transform var(--transition-speed), opacity var(--transition-speed), background-color var(--transition-speed);
 }
 
 /* Modal */
@@ -720,7 +738,7 @@ button svg {
   max-width: 100%;
   transform: translateX(120%);
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all var(--transition-speed);
   border-left: 4px solid var(--info-color);
 }
 

@@ -1,0 +1,166 @@
+/* Dark Mode Variables */
+[data-theme="dark"] {
+  --primary-color: #6d8cb5;
+  --primary-dark: #4a6fa5;
+  --primary-light: #1a2234;
+  --secondary-color: #94a3b8;
+  --success-color: #22c55e;
+  --danger-color: #ef4444;
+  --warning-color: #f59e0b;
+  --info-color: #3b82f6;
+  --light-color: #202938;
+  --dark-color: #e2e8f0;
+  --gray-100: #1e293b;
+  --gray-200: #334155;
+  --gray-300: #475569;
+  --gray-400: #64748b;
+  --gray-500: #94a3b8;
+
+  --q1-color: #f87171;
+  --q2-color: #fbbf24;
+  --q3-color: #60a5fa;
+  --q4-color: #9ca3af;
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+
+  /* Apply dark theme base styles */
+  background-color: var(--gray-100);
+  color: var(--dark-color);
+}
+
+/* Header and Card Backgrounds */
+[data-theme="dark"] .app-container,
+[data-theme="dark"] header,
+[data-theme="dark"] .task-form-card,
+[data-theme="dark"] .quadrant,
+[data-theme="dark"] .completed-task-section,
+[data-theme="dark"] .modal-content {
+  background-color: var(--gray-100);
+}
+
+/* Card Headers and Footers */
+[data-theme="dark"] .card-header,
+[data-theme="dark"] .card-footer,
+[data-theme="dark"] .quadrant-header,
+[data-theme="dark"] .modal-header {
+  background-color: var(--gray-200);
+  border-color: var(--gray-300);
+}
+
+/* Form Elements */
+[data-theme="dark"] input,
+[data-theme="dark"] select {
+  background-color: var(--gray-200);
+  border-color: var(--gray-300);
+  color: var(--dark-color);
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(109, 140, 181, 0.3);
+}
+
+/* Task Items */
+[data-theme="dark"] .task-item {
+  background-color: var(--gray-200);
+}
+
+[data-theme="dark"] .task-item:hover {
+  background-color: var(--gray-300);
+}
+
+[data-theme="dark"] .task-text {
+  color: var(--dark-color);
+}
+
+/* Completed Task Items */
+[data-theme="dark"] .completed-task-item {
+  background-color: var(--gray-200);
+}
+
+[data-theme="dark"] .completed-task-item:hover {
+  background-color: var(--gray-300);
+}
+
+/* Empty State */
+[data-theme="dark"] .empty-state {
+  background-color: var(--gray-200);
+  color: var(--gray-500);
+}
+
+/* Dragover Effect */
+[data-theme="dark"] .quadrant.dragover {
+  background-color: var(--primary-light);
+}
+
+[data-theme="dark"] .quadrant.dragover::before {
+  background-color: rgba(109, 140, 181, 0.2);
+}
+
+/* Toast Notifications */
+[data-theme="dark"] .toast {
+  background-color: var(--gray-200);
+  color: var(--dark-color);
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hide appropriate icon based on theme */
+[data-theme="light"] .moon-icon {
+  display: block;
+}
+
+[data-theme="light"] .sun-icon {
+  display: none;
+}
+
+[data-theme="dark"] .moon-icon {
+  display: none;
+}
+
+[data-theme="dark"] .sun-icon {
+  display: block;
+}
+
+/* Animation for theme toggle */
+[data-theme] {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle svg {
+  transition: transform 0.5s ease;
+}
+
+.theme-toggle:active svg {
+  transform: rotate(360deg);
+}
