@@ -1,4 +1,4 @@
-// Service Worker per la PWA dei Quadranti di Priorità
+// Service Worker per la PWA Eisenhower Matrix
 
 const CACHE_NAME = 'priority-quadrants-v1';
 const urlsToCache = [

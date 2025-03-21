@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Script di inizializzazione della PWA Quadranti di Priorità
+ * Script di inizializzazione della PWA Eisenhower Matrix
  * Questo script configura l'ambiente di sviluppo e crea tutti i file necessari
  * per il funzionamento dell'applicazione.
  * 
@@ -14,7 +14,7 @@ const { execSync } = require('child_process');
 
 // Banner di avvio
 console.log('\n===================================================');
-console.log('🚀 Inizializzazione PWA Quadranti di Priorità');
+console.log("🚀 Inizializzazione PWA Eisenhower Matrix");
 console.log('===================================================\n');
 
 // Creazione delle directory necessarie
@@ -246,9 +246,9 @@ try {
 
 // Crea un file README.md con istruzioni
 console.log('\n📄 Creazione del file README.md...');
-const readmeContent = `# Quadranti di Priorità - PWA
+const readmeContent = `# Eisenhower Matrix - PWA
 
-Un'applicazione web progressiva (PWA) per gestire le attività utilizzando il metodo dei quadranti di priorità.
+Un'applicazione web progressiva (PWA) per gestire le attività utilizzando il metodo della Eisenhower Matrix.
 
 ## Caratteristiche
 

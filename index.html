@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quadranti di Priorità</title>
+    <title>Eisenhower Matrix</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <meta name="theme-color" content="#4a6fa5">
 </head>
+
 <body>
     <div class="app-container">
         <header>
@@ -21,7 +24,7 @@
                     <rect x="3" y="14" width="7" height="7" rx="1"></rect>
                     <rect x="14" y="14" width="7" height="7" rx="1"></rect>
                 </svg>
-                <h1>Quadranti di Priorità</h1>
+                <h1>Eisenhower Matrix</h1>
             </div>
             <button id="installApp" class="install-button">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -50,7 +53,8 @@
                                     <option value="4">Q4: Non Urgente e Non Importante</option>
                                 </select>
                                 <button id="addTask">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <line x1="12" y1="5" x2="12" y2="19"></line>
                                         <line x1="5" y1="12" x2="19" y2="12"></line>
                                     </svg>
@@ -60,16 +64,18 @@
                         </div>
                         <div class="card-footer">
                             <div class="drag-tip">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <line x1="12" y1="16" x2="12" y2="12"></line>
                                     <line x1="12" y1="8" x2="12.01" y2="8"></line>
                                 </svg>
-                                <span>Trascina le attività per spostarle tra i quadranti • Doppio click per modificare</span>
+                                <span>Trascina le attività per spostarle tra i quadranti • Doppio click per
+                                    modificare</span>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="quadrants-container">
                         <div class="quadrants">
                             <div class="quadrant quadrant-1" id="quadrant1">
@@ -99,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="side-column">
                     <div class="completed-task-section">
                         <div class="card-header">
@@ -108,7 +114,8 @@
                         <div class="completed-tasks" id="recentCompletedTasks"></div>
                         <div class="card-footer">
                             <button id="viewAllCompleted" class="view-all-btn">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <polyline points="6 9 12 15 18 9"></polyline>
                                 </svg>
                                 Visualizza Tutte
@@ -134,4 +141,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
