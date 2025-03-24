@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline - Eisenhower Matrix</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #4a6fa5;
+      --secondary-color: #6c757d;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      background-color: #f8f9fa;
+      color: #343a40;
+    }
+
+    .container {
+      max-width: 500px;
+      padding: 30px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--primary-color);
+    }
+
+    h1 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+
+    .btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #3a5a80;
+    }
+
+    .offline-icon {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        width: 100%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+        <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+        <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+        <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+      </svg>
+      <h1>Eisenhower Matrix</h1>
+    </div>
+
+    <svg class="offline-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="1" y1="1" x2="23" y2="23"></line>
+      <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path>
+      <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path>
+      <path d="M10.71 5.05A16 16 0 0 1 22.58 9"></path>
+      <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path>
+      <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+      <line x1="12" y1="20" x2="12.01" y2="20"></line>
+    </svg>
+
+    <h2>Sei offline</h2>
+    <p>L'app Eisenhower Matrix è progettata per funzionare offline, ma sembra che tu stia cercando di accedere a una
+      risorsa che non è stata salvata nella cache.</p>
+    <p>Le tue attività esistenti sono ancora disponibili e completamente funzionanti anche in modalità offline.</p>
+    <p>Per accedere a nuove funzionalità o aggiornamenti, riconnettiti a Internet e ricarica l'applicazione.</p>
+
+    <button class="btn" onclick="window.location.href='./'">Torna alla home</button>
+  </div>
+
+  <script>
+    // Controllo periodico della connessione
+    function checkConnection() {
+      if (navigator.onLine) {
+        document.querySelector('.btn').innerText = 'Ricarica l\'app';
+        document.querySelector('.btn').onclick = function () {
+          window.location.reload();
+        };
+      }
+    }
+
+    // Verifica la connessione all'avvio
+    checkConnection();
+
+    // Verifica periodicamente la connessione
+    setInterval(checkConnection, 5000);
+
+    // Ascolta gli eventi di cambiamento della connessione
+    window.addEventListener('online', checkConnection);
+  </script>
+</body>
+
+</html>

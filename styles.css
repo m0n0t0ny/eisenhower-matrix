@@ -90,15 +90,16 @@ h3 {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .logo h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 0rem;
   margin-left: 1rem;
 }
@@ -113,7 +114,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--primary-color);
 }
+
+.header-actions {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -602,14 +606,16 @@ button svg {
   background-color: rgba(52, 152, 219, 0.1);
   transform: translateX(-100%);
   opacity: 0;
-  transition: transform var(--transition-speed), opacity var(--transition-speed), background-color var(--transition-speed);
+  transition: transform var(--transition-speed), opacity var(--transition-speed),
+    background-color var(--transition-speed);
 }
 
 .completed-task-item.deleting {
   background-color: rgba(231, 76, 60, 0.1);
   transform: scale(0.8);
   opacity: 0;
-  transition: transform var(--transition-speed), opacity var(--transition-speed), background-color var(--transition-speed);
+  transition: transform var(--transition-speed), opacity var(--transition-speed),
+    background-color var(--transition-speed);
 }
 
 /* Modal */

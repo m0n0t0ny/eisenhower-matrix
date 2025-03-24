@@ -138,6 +138,7 @@
 /* Hide appropriate icon based on theme */
 [data-theme="light"] .moon-icon {
   display: block;
+  stroke: #000000;
 }
 
 [data-theme="light"] .sun-icon {
