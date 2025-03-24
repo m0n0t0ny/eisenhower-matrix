@@ -14,8 +14,6 @@ const urlsToCache = [
   "./app.js",
   "./manifest.json",
   "./icon.svg",
-  "./icons/icon-16x16.png",
-  "./icons/icon-32x32.png",
   "./icons/icon-72x72.png",
   "./icons/icon-96x96.png",
   "./icons/icon-128x128.png",
@@ -24,8 +22,6 @@ const urlsToCache = [
   "./icons/icon-192x192.png",
   "./icons/icon-384x384.png",
   "./icons/icon-512x512.png",
-  "./icons/add-task.png",
-  "./icons/completed.png",
   "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
 ];
 
