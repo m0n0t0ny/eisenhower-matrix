@@ -703,7 +703,8 @@ button svg {
 
 /* PWA support */
 .install-button {
-  display: none;
+  display: flex;
+  align-items: center;
   background-color: var(--success-color);
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
@@ -869,8 +870,8 @@ button svg {
   }
 
   header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     gap: 0.5rem;
     padding: 0.75rem calc(var(--gutter) / 2);
   }
