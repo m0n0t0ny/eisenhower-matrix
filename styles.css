@@ -147,6 +147,7 @@ header {
   box-shadow: var(--shadow-md);
   overflow: hidden;
   margin-bottom: var(--gutter);
+  border: 1px solid var(--gray-200);
 }
 
 .task-form {
@@ -258,6 +259,7 @@ button svg {
   overflow: hidden;
   position: relative;
   transition: box-shadow var(--transition-speed);
+  border: 1px solid var(--gray-200);
 }
 
 .quadrant:hover {
@@ -525,6 +527,7 @@ button svg {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   overflow: hidden;
+  border: 1px solid var(--gray-200);
 }
 
 .completed-tasks {
@@ -645,6 +648,7 @@ button svg {
   flex-direction: column;
   box-shadow: var(--shadow-lg);
   animation: modalFadeIn 0.25s;
+  border: 1px solid var(--gray-200);
 }
 
 .modal-header {
@@ -822,6 +826,7 @@ button svg {
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     background-color: white;
+    border: 1px solid var(--gray-200);
   }
 
   .main-content {
@@ -906,4 +911,52 @@ button svg {
   h1 {
     font-size: 1.5rem;
   }
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hide appropriate icon based on theme */
+[data-theme="light"] .moon-icon {
+  display: block;
+  stroke: #000000; /* Colore nero per la luna in modalità chiara */
+}
+
+[data-theme="light"] .sun-icon {
+  display: none;
+}
+
+[data-theme="dark"] .moon-icon {
+  display: none;
+}
+
+[data-theme="dark"] .sun-icon {
+  display: block;
+  stroke: #ffffff; /* Colore bianco per il sole in modalità scura */
 }

@@ -138,7 +138,7 @@
 /* Hide appropriate icon based on theme */
 [data-theme="light"] .moon-icon {
   display: block;
-  stroke: #000000;
+  stroke: #000000; /* Colore nero per la luna in modalità chiara */
 }
 
 [data-theme="light"] .sun-icon {
@@ -151,6 +151,7 @@
 
 [data-theme="dark"] .sun-icon {
   display: block;
+  stroke: #ffffff; /* Colore bianco per il sole in modalità scura */
 }
 
 /* Animation for theme toggle */
@@ -164,4 +165,35 @@
 
 .theme-toggle:active svg {
   transform: rotate(360deg);
+}
+
+/* Bordi per gli elementi in modalità chiara (light mode) */
+.completed-task-section,
+.task-form-card,
+.quadrant {
+  border: 1px solid var(--gray-200);
+}
+
+/* Bordi per gli elementi in modalità scura (dark mode) */
+[data-theme="dark"] .completed-task-section,
+[data-theme="dark"] .task-form-card,
+[data-theme="dark"] .quadrant {
+  border: 1px solid var(--gray-300);
+}
+
+/* Mantieni i colori di bordo-top specifici per ogni quadrante */
+.quadrant-1 .quadrant-header {
+  border-top: 3px solid var(--q1-color);
+}
+
+.quadrant-2 .quadrant-header {
+  border-top: 3px solid var(--q2-color);
+}
+
+.quadrant-3 .quadrant-header {
+  border-top: 3px solid var(--q3-color);
+}
+
+.quadrant-4 .quadrant-header {
+  border-top: 3px solid var(--q4-color);
 }
