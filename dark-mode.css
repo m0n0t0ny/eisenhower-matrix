@@ -42,7 +42,6 @@
 
 /* Card Headers and Footers */
 [data-theme="dark"] .card-header,
-[data-theme="dark"] .card-footer,
 [data-theme="dark"] .quadrant-header,
 [data-theme="dark"] .modal-header {
   background-color: var(--gray-200);
@@ -83,12 +82,6 @@
 
 [data-theme="dark"] .completed-task-item:hover {
   background-color: var(--gray-300);
-}
-
-/* Empty State */
-[data-theme="dark"] .empty-state {
-  background-color: var(--gray-200);
-  color: var(--gray-500);
 }
 
 /* Dragover Effect */
@@ -196,4 +189,16 @@
 
 .quadrant-4 .quadrant-header {
   border-top: 3px solid var(--q4-color);
+}
+
+/* Checkbox in tema chiaro */
+[data-theme="light"] input[type="checkbox"] {
+  border: 1px solid var(--gray-400);
+  background-color: white;
+}
+
+/* Checkbox in tema scuro */
+[data-theme="dark"] input[type="checkbox"] {
+  border: 1px solid var(--gray-300);
+  background-color: #1e293b;
 }

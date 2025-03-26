@@ -7,7 +7,7 @@
     <title>Eisenhower Matrix</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./dark-mode.css">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -15,16 +15,24 @@
     <meta name="theme-color" content="#4a6fa5">
 
     <!-- Favicon base -->
-    <link rel="icon" type="image/svg+xml" href="icon.svg">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32x32.png">
-    <link rel="icon" type="image/png" sizes="72x72" href="icons/icon-72x72.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="icons/icon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="./icon.svg">
+    <link rel="icon" type="image/png" sizes="72x72" href="./icons/icon-72x72.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icons/icon-96x96.png">
+    <link rel="icon" type="image/png" sizes="384x384" href="./icons/icon-384x384.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./icons/icon-512x512.png">
 
     <!-- Apple Touch Icons -->
-    <link rel="apple-touch-icon" href="icons/icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="./icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="384x384" href="./icons/icon-384x384.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="./icons/icon-512x512.png">
+
+    <!-- Aggiungi il supporto per maskable icon -->
+    <link rel="mask-icon" href="./icons/icon-512x512.png" color="#4a6fa5">
+
+    <!-- Preload service worker per migliorare l'affidabilità -->
+    <link rel="preload" href="./sw.js" as="script">
 
     <!-- Meta tags per dispositivi mobili e PWA -->
     <meta name="application-name" content="Eisenhower Matrix">
@@ -37,6 +45,7 @@
     <meta name="msapplication-TileImage" content="icons/icon-144x144.png">
     <meta name="msapplication-config" content="none">
     <meta name="theme-color" content="#4a6fa5">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- SEO meta tags -->
     <meta name="description"
@@ -88,7 +97,7 @@
                         <polyline points="7 10 12 15 17 10"></polyline>
                         <line x1="12" y1="15" x2="12" y2="3"></line>
                     </svg>
-                    Installa App
+                    Installa
                 </button>
             </div>
         </header>
@@ -197,6 +206,11 @@
     </div>
 
     <script src="./app.js"></script>
+    <noscript>
+        <div style="padding: 20px; text-align: center; color: #e74c3c;">
+            Questa applicazione richiede JavaScript per funzionare. Per favore, abilita JavaScript nel tuo browser.
+        </div>
+    </noscript>
 </body>
 
 </html>

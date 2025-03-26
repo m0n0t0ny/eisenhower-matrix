@@ -59,7 +59,6 @@ h1,
 h2,
 h3 {
   color: var(--dark-color);
-  margin-bottom: 0.5rem;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -71,11 +70,9 @@ h1 {
 h2 {
   font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -107,7 +104,6 @@ h3 {
 header {
   background-color: white;
   padding: 1rem var(--gutter);
-  box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -143,30 +139,33 @@ header {
 /* Form section */
 .task-form-card {
   background-color: white;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
+  /* border-radius: var(--radius-md); */
   overflow: hidden;
   margin-bottom: var(--gutter);
   border: 1px solid var(--gray-200);
 }
 
 .task-form {
-  padding: 1.25rem;
+  padding: 1rem;
 }
 
 .card-header {
-  padding: 1rem 1.25rem;
+  padding: 1rem;
   border-bottom: 1px solid var(--gray-200);
   background-color: #fcfcfc;
 }
 
 .card-body {
-  padding: 1.25rem;
+  padding: 1rem;
+}
+
+.card-body .input-group {
+  margin: 0;
 }
 
 .card-footer {
-  padding: 0.75rem 1.25rem;
-  background-color: #fcfcfc;
+  padding: 1rem;
+  background-color: var(--gray-100);
   border-top: 1px solid var(--gray-200);
 }
 
@@ -194,7 +193,7 @@ select,
 button {
   padding: 0.5rem 0.75rem;
   border: 1px solid var(--gray-300);
-  border-radius: var(--radius-sm);
+  /* border-radius: var(--radius-sm); */
   font-size: 0.875rem;
   transition: all var(--transition-speed);
   line-height: 1.4;
@@ -204,7 +203,6 @@ input:focus,
 select:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.15);
 }
 
 input,
@@ -252,18 +250,12 @@ button svg {
 
 .quadrant {
   background-color: white;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
+  /* border-radius: var(--radius-md); */
   display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  transition: box-shadow var(--transition-speed);
   border: 1px solid var(--gray-200);
-}
-
-.quadrant:hover {
-  box-shadow: var(--shadow-lg);
 }
 
 .quadrant-header {
@@ -291,7 +283,7 @@ button svg {
 }
 
 .task-list {
-  padding: 0.75rem;
+  padding: 1rem;
   overflow-y: auto;
   flex-grow: 1;
 }
@@ -300,16 +292,15 @@ button svg {
 .task-item {
   display: flex;
   align-items: center;
-  padding: 0.5rem 0.75rem;
-  border-radius: var(--radius-sm);
-  margin-bottom: 0.5rem;
+  padding: 3px 3px;
+  /* border-radius: calc(var(--radius-sm) + 3px); */
+  margin-bottom: 6px;
   background-color: var(--gray-100);
   border-left: 3px solid transparent;
   transition: all var(--transition-speed);
   animation: fadeIn 0.3s ease-out;
   cursor: grab;
   position: relative;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .task-item:last-child {
@@ -366,12 +357,11 @@ button svg {
 
 .task-checkbox {
   margin-right: 10px;
-  width: 16px;
-  height: 16px;
-  accent-color: var(--primary-color);
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   z-index: 2;
-  flex-shrink: 0;
+  /* border-radius: var(--radius-sm) !important; */
 }
 
 .task-checkbox:checked {
@@ -384,7 +374,15 @@ button svg {
   align-items: center;
   overflow: hidden;
   position: relative;
+}
+
+input[type="checkbox"] {
+  appearance: none;
   padding-right: 6px;
+}
+
+.task-checkbox {
+  flex-grow: 0;
 }
 
 .task-text {
@@ -413,7 +411,7 @@ button svg {
   flex-grow: 1;
   padding: 0.25rem 0.5rem;
   border: 1px solid var(--primary-color);
-  border-radius: var(--radius-sm);
+  /* border-radius: var(--radius-sm); */
   font-size: 0.875rem;
   font-family: inherit;
   outline: none;
@@ -467,7 +465,7 @@ button svg {
   align-items: center;
   justify-content: center;
   font-size: 0.75rem;
-  border-radius: var(--radius-sm);
+  /* border-radius: var(--radius-sm); */
 }
 
 .edit-btn {
@@ -517,26 +515,26 @@ button svg {
   font-size: 1.25rem;
   font-weight: 600;
   z-index: 1;
-  border-radius: var(--radius-md);
+  /* border-radius: var(--radius-md); */
   pointer-events: none;
 }
 
 /* Completed tasks section */
 .completed-task-section {
   background-color: white;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
+  /* border-radius: var(--radius-md); */
   overflow: hidden;
   border: 1px solid var(--gray-200);
 }
 
 .completed-tasks {
   padding: 0.75rem 1.25rem;
+  height: 100%;
 }
 
 .completed-task-item {
   padding: 0.5rem 0.75rem;
-  border-radius: var(--radius-sm);
+  /* border-radius: var(--radius-sm); */
   margin-bottom: 0.5rem;
   background-color: var(--gray-100);
   display: flex;
@@ -576,7 +574,7 @@ button svg {
 
 .completed-task-actions button {
   padding: 4px;
-  border-radius: var(--radius-sm);
+  /* border-radius: var(--radius-sm); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -594,7 +592,7 @@ button svg {
 
 .view-all-btn {
   margin-top: 0;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   align-self: flex-start;
   padding: 0.5rem 1rem;
   width: auto;
@@ -602,7 +600,7 @@ button svg {
 }
 
 .view-all-btn:hover {
-  background-color: #5a6268;
+  background-color: var(--primary-dark);
 }
 
 .completed-task-item.restoring {
@@ -641,12 +639,11 @@ button svg {
   padding: 0;
   width: 90%;
   max-width: 800px;
-  border-radius: var(--radius-md);
+  /* border-radius: var(--radius-md); */
   max-height: 90%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-lg);
   animation: modalFadeIn 0.25s;
   border: 1px solid var(--gray-200);
 }
@@ -661,7 +658,7 @@ button svg {
 }
 
 .modal-body {
-  padding: 1.25rem;
+  padding: 1rem;
   overflow-y: auto;
   flex: 1;
 }
@@ -708,6 +705,7 @@ button svg {
   background-color: var(--success-color);
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
+  margin-left: 0.5rem;
 }
 
 .install-button:hover {
@@ -717,11 +715,10 @@ button svg {
 /* Empty states */
 .empty-state {
   text-align: center;
-  padding: 1.5rem;
+  padding: 0.35rem;
   color: var(--secondary-color);
   font-style: italic;
   font-size: 0.875rem;
-  background-color: var(--gray-100);
   border-radius: var(--radius-sm);
 }
 
@@ -740,9 +737,8 @@ button svg {
 
 .toast {
   background-color: white;
-  border-radius: var(--radius-md);
+  /* border-radius: var(--radius-md); */
   padding: 0.75rem 1rem;
-  box-shadow: var(--shadow-lg);
   display: flex;
   align-items: center;
   min-width: 0;
@@ -818,14 +814,9 @@ button svg {
 
 /* Media queries */
 @media (min-width: 992px) {
-  body {
-    padding: 1.5rem;
-  }
-
   .app-container {
-    border-radius: var(--radius-lg);
+    /* border-radius: calc(var(--radius-lg) + 16px); */
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
     background-color: white;
     border: 1px solid var(--gray-200);
   }
@@ -876,8 +867,14 @@ button svg {
     padding: 0.75rem calc(var(--gutter) / 2);
   }
 
+  .header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
   .install-button {
-    align-self: flex-start;
+    display: flex;
   }
 
   .modal-content {
@@ -886,7 +883,7 @@ button svg {
   }
 
   .task-item {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
 
   .task-actions {
@@ -934,30 +931,7 @@ button svg {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-[data-theme="dark"] .theme-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
 .theme-toggle svg {
   width: 20px;
   height: 20px;
-}
-
-/* Hide appropriate icon based on theme */
-[data-theme="light"] .moon-icon {
-  display: block;
-  stroke: #000000; /* Colore nero per la luna in modalità chiara */
-}
-
-[data-theme="light"] .sun-icon {
-  display: none;
-}
-
-[data-theme="dark"] .moon-icon {
-  display: none;
-}
-
-[data-theme="dark"] .sun-icon {
-  display: block;
-  stroke: #ffffff; /* Colore bianco per il sole in modalità scura */
 }

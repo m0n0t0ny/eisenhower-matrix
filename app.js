@@ -969,6 +969,11 @@ class PWAManager {
     this.installButton = document.getElementById("installApp");
     this.deferredPrompt = null;
 
+    // Nascondi il pulsante di installazione all'inizio
+    if (this.installButton) {
+      this.installButton.style.display = "none";
+    }
+
     this.initialize();
   }
 
@@ -977,24 +982,60 @@ class PWAManager {
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
         navigator.serviceWorker
-          .register("sw.js")
-          .then((registration) => {})
-          .catch((error) => {});
+          .register("./sw.js")
+          .then((registration) => {
+            console.log("Service Worker registrato con successo");
+          })
+          .catch((error) => {
+            console.error(
+              "Errore nella registrazione del Service Worker:",
+              error
+            );
+          });
       });
     }
 
-    // Gestisce l'installazione dell'app
+    // Cattura l'evento beforeinstallprompt
     window.addEventListener("beforeinstallprompt", (e) => {
+      // Previeni il prompt automatico
       e.preventDefault();
+
+      // Salva l'evento
       this.deferredPrompt = e;
-      this.installButton.style.display = "block";
+
+      // Mostra il pulsante di installazione
+      if (this.installButton) {
+        this.installButton.style.display = "flex";
+      }
     });
 
-    this.installButton.addEventListener("click", async () => {
-      if (this.deferredPrompt) {
-        this.deferredPrompt.prompt();
-        const { outcome } = await this.deferredPrompt.userChoice;
-        this.deferredPrompt = null;
+    // Gestisci il click sul pulsante di installazione
+    if (this.installButton) {
+      this.installButton.addEventListener("click", () => {
+        if (this.deferredPrompt) {
+          // Mostra il prompt di installazione
+          this.deferredPrompt.prompt();
+
+          // Gestisci la risposta dell'utente
+          this.deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === "accepted") {
+              console.log("Utente ha accettato l'installazione");
+            } else {
+              console.log("Utente ha rifiutato l'installazione");
+            }
+
+            // Reset del prompt - può essere usato solo una volta
+            this.deferredPrompt = null;
+            this.installButton.style.display = "none";
+          });
+        }
+      });
+    }
+
+    // Rileva quando l'app è stata installata
+    window.addEventListener("appinstalled", (e) => {
+      console.log("App installata!");
+      if (this.installButton) {
         this.installButton.style.display = "none";
       }
     });
